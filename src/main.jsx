@@ -4,8 +4,9 @@ import {
   createBrowserRouter,RouterProvider
 } from "react-router-dom";
 import './index.css'
-import Hero from './Components/Hero/Hero.jsx';
-import Chartii from './Components/Hero/Chartii.jsx';
+import Chartii from './Components/Chart/Chartii.jsx';
+import Hero from './Pages/Hero/Hero';
+
 
 const router = createBrowserRouter([
   { path: "/",element: <Hero />,},
