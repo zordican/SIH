@@ -4,7 +4,8 @@ import {
   createBrowserRouter,RouterProvider
 } from "react-router-dom";
 import './index.css'
-import Hero from './Components/Hero/Hero.jsx';
+import Hero from './Pages/Hero/Hero';
+
 
 const router = createBrowserRouter([
   { path: "/",element: <Hero />,},
