@@ -5,11 +5,7 @@ ChartJS.register(...registerables);
 
 const Chartii = () => {
   console.log("Rendering Chartii component");
-
-  // Function to generate random data
   const generateRandomData = () => Array.from({ length: 24 }, () => Math.floor(Math.random() * 5000) + 2000);
-
-  // Generate different datasets
   const loadProfileData = {
     labels: Array.from({ length: 24 }, (_, i) => `${i}:00`),
     datasets: [
@@ -53,19 +49,19 @@ const Chartii = () => {
     <div style={{ padding: '20px' }}>
       <h1>Forecasting Plots</h1>
       
-      {/* Load Profile Forecasting Plot */}
+      {}
       <div style={{ marginBottom: '50px' }}>
         <h3>Load Profile Forecasting</h3>
         <Line data={loadProfileData} height={100} width={400} />
       </div>
 
-      {/* Net Load Forecasting Plot */}
+      {}
       <div style={{ marginBottom: '50px' }}>
         <h3>Net Load Forecasting</h3>
         <Line data={netLoadData} height={100} width={400} />
       </div>
 
-      {/* Peak Load Forecasting Plot */}
+      {}
       <div style={{ marginBottom: '50px' }}>
         <h3>Peak Load Forecasting</h3>
         <Line data={peakLoadData} height={100} width={400} />
