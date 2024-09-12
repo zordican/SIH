@@ -1,13 +1,12 @@
-import { useNavigate } from "react-router-dom";
-import styles from "./Hero.module.scss";
+import styles from "./Hero.module.scss"
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate();  // Get the navigate function from useNavigate
 
-  const handleClick = () => {
-    navigate("/input");
+  const handleNavigate = () => {
+    navigate("/select");  // Navigate to the "/select" route
   };
-
   return (
     <div className={styles.mainDiv}>
 
@@ -17,10 +16,7 @@ const Hero = () => {
           <span className={styles.electricityDemand}>electricity demand</span> <br /> 
           <span className={styles.projection}>projection</span> projection for Delhi <br /> Power System
         </h1>
-        <button onClick={handleClick} className={styles.getStartedButton}>GET Started</button>
-      </div>
-      <div className={styles.imageContainer}>
-        <img src="https://res.cloudinary.com/dp3aoinmu/image/upload/v1725871913/Walmart_PNG/ii3xqqpgokfoltegbgpa.png" alt="" />
+        <button on onClick={handleNavigate}>GET STARTED</button>
       </div>
     </div>
   );
