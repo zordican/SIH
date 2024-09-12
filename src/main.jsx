@@ -4,7 +4,7 @@ import {
   createBrowserRouter,RouterProvider
 } from "react-router-dom";
 import './index.css'
-import Chartii from './Components/Chart/Chartii.jsx';
+import Chartii from './Pages/Hero/Chartii.jsx';
 import Hero from './Pages/Hero/Hero';
 
 
