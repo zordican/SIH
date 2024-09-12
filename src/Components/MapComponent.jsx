@@ -15,7 +15,7 @@ const MapComponent = ({ selectedDistrict }) => {
   };
 
   return (
-    <MapContainer center={[28.6139, 77.209]} zoom={12} style={{ height: '300px', width: '40%', fontFamily: "DM Sans" }}>
+    <MapContainer center={[28.6139, 77.209]} zoom={12} style={{ height: '300px', width: '40%', fontFamily: "DM Sans",marginTop:'200px' }}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution="&copy; <a href='http://osm.org/copyright'>OpenStreetMap</a> contributors"
