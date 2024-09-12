@@ -1,11 +1,45 @@
-
+import React from 'react';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, registerables } from 'chart.js';
+import './Chartii.scss'; 
+
 ChartJS.register(...registerables);
 
 const Chartii = () => {
   console.log("Rendering Chartii component");
+
   const generateRandomData = () => Array.from({ length: 24 }, () => Math.floor(Math.random() * 5000) + 2000);
+
+  const commonOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        labels: {
+          color: 'white',
+        },
+      },
+    },
+    scales: {
+      x: {
+        ticks: {
+          color: 'white', 
+        },
+        grid: {
+          color: 'rgba(255, 255, 255, 0.1)',
+        },
+      },
+      y: {
+        ticks: {
+          color: 'white', 
+        },
+        grid: {
+          color: 'rgba(255, 255, 255, 0.1)',
+        },
+      },
+    },
+  };
+
   const loadProfileData = {
     labels: Array.from({ length: 24 }, (_, i) => `${i}:00`),
     datasets: [
@@ -46,25 +80,22 @@ const Chartii = () => {
   };
 
   return (
-    <div style={{ padding: '20px' }}>
-      <h1>Forecasting Plots</h1>
-      
-      {}
-      <div style={{ marginBottom: '50px' }}>
-        <h3>Load Profile Forecasting</h3>
-        <Line data={loadProfileData} height={100} width={400} />
+    <div className="container">
+      <h1 className="heading">Forecasting Plots</h1>
+
+      <div className="chart-container">
+        <h3 className="chart-title">Load Profile Forecasting</h3>
+        <Line data={loadProfileData} options={commonOptions} />
       </div>
 
-      {}
-      <div style={{ marginBottom: '50px' }}>
-        <h3>Net Load Forecasting</h3>
-        <Line data={netLoadData} height={100} width={400} />
+      <div className="chart-container">
+        <h3 className="chart-title">Net Load Forecasting</h3>
+        <Line data={netLoadData} options={commonOptions} />
       </div>
 
-      {}
-      <div style={{ marginBottom: '50px' }}>
-        <h3>Peak Load Forecasting</h3>
-        <Line data={peakLoadData} height={100} width={400} />
+      <div className="chart-container">
+        <h3 className="chart-title">Peak Load Forecasting</h3>
+        <Line data={peakLoadData} options={commonOptions} />
       </div>
     </div>
   );
