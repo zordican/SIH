@@ -3,6 +3,7 @@ import CalendarComponent from "../../Components/CalendarComponent";
 import DistrictDropdown from "../../Components/DistrictDropdown";
 import MapComponent from "../../Components/MapComponent";
 import "./Page1.css";
+import { useNavigate } from "react-router-dom";
 
 const Page1 = () => {
   const [selectedDistrict, setSelectedDistrict] = useState({
@@ -27,6 +28,12 @@ const Page1 = () => {
     setSelectedDistrict(districtData);
   };
 
+  const navigate = useNavigate();  // Get the navigate function from useNavigate
+
+  const handleNavigate = () => {
+    navigate("/input");  // Navigate to the "/select" route
+  };
+
   return (
     <div className="app-container">
       <div className="header">
@@ -36,7 +43,7 @@ const Page1 = () => {
         <MapComponent selectedDistrict={selectedDistrict} />
         <CalendarComponent />
       </div>
-      <button className="go-button">GO</button>
+      <button className="go-button" onClick={handleNavigate}>GO</button>
     </div>
   );
 };

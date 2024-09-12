@@ -9,6 +9,7 @@ import Hero from './Pages/Hero/Hero';
 import Page1 from './Pages/Page1/Page1.jsx';
 
 
+
 const router = createBrowserRouter([
   { path: "/",element: <Hero />,},
   { path: "/input", element: <Chartii/>},
