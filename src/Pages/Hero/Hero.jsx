@@ -17,7 +17,7 @@ const Hero = () => {
         </h1>
         <button on onClick={handleNavigate}>GET STARTED</button>
       </div>
-      <div className={styles.imageContainer}><img src="https://res.cloudinary.com/dp3aoinmu/image/upload/v1725871913/Walmart_PNG/ii3xqqpgokfoltegbgpa.png" alt="" /></div>
+      <div className={styles.imageContainer}><img src="https://res.cloudinary.com/dp3aoinmu/image/upload/v1726217630/Walmart_PNG/vvvwsozkopt2ecizwxi8.jpg" alt="" /></div>
     </div>
   )
 }
